@@ -1,7 +1,7 @@
 .cont-carga {
   /* Contenedor principal */
   border: 1px solid #817474b0;
-//   background: cornflowerblue;
+  //   background: cornflowerblue;
   margin: 40px;
   height: 50%;
   border-radius: 5px;
@@ -9,72 +9,69 @@
   display: grid;
   place-content: center;
   background-color: rgb(240, 244, 249);
-  
-  form{
-      display: grid;
-      align-content: center;
-        align-self: center;
-    label{
-        // background-color: crimson;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        font-size: 1.2rem;
+
+  form {
+    display: grid;
+    align-content: center;
+    align-self: center;
+
+    label {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      font-size: 1.2rem;
     }
 
-    p.input-simulate{
-        background-color: white;
-        height: 48px;
-        width: 40vw;
-        border-radius: 10px;
-        max-width: 300px;
-        justify-self: center;
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        padding: 10px;
-        cursor: pointer;
+    p.input-simulate {
+      background-color: white;
+      height: 48px;
+      width: 40vw;
+      border-radius: 10px;
+      max-width: 300px;
+      justify-self: center;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px;
+      cursor: pointer;
 
-        span{
-            height: 30px;
-            width: 30px;
-            background: white;
-            display: grid;
-            place-content: center;
-            border: 2px solid orange;
-            border-radius: 5px;
-            color: orange;
-        }
-
+      span {
+        height: 30px;
+        width: 30px;
+        background: white;
+        display: grid;
+        place-content: center;
+        border: 2px solid orange;
+        border-radius: 5px;
+        color: orange;
+      }
     }
 
-    
-    p.wrong{
-        border:1px solid crimson;
-        color: crimson;
+    p.wrong {
+      border: 1px solid crimson;
+      color: crimson;
     }
 
-    .error-carga{
-        margin: 0;
-        padding: 0px;
-        color: crimson;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    .error-carga {
+      margin: 0;
+      padding: 0px;
+      color: crimson;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    input{
-        display: none;
+    input {
+      display: none;
     }
 
-    button{
-        background: linear-gradient(orange, orangered);
-        color: white;
-        border: none;
-        height: 48px;
-        
+    button {
+      background: linear-gradient(orange, orangered);
+      color: white;
+      border: none;
+      height: 48px;
     }
   }
 }

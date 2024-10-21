@@ -11,26 +11,39 @@ import Accesos from "./pages/Accesos.jsx";
 import Resultados from "./pages/Resultados.jsx";
 import HeaderComponent from "./components/nav/nav.component";
 import MenuComponent from "./components/menu/menu.component";
+import VistaPrevia from "./components/table/table.component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import "./PrediApp.scss";
 
 
 const App = () => {
+
+  const [menuVisible, setMenuVisible] = useState(true);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <Router>
-      <div className="principal-container">
+      <div className={`principal-container ${!menuVisible ? 'full-width' : ''}`}>
         <div className="headere">
-          <HeaderComponent/>
+          <HeaderComponent toggleMenu={toggleMenu}/>
         </div>
-        <div className="mene">
-          <MenuComponent/>
-        </div>
+        {menuVisible && (
+          <div className="mene">
+            <MenuComponent />
+          </div>
+        )}
         <div className="contenide">
           <Routes>
             <Route exact path="/" element={<Inicio />} />
             <Route exact path="/anadir-registro" element={<AnadirRegistro />} />
             <Route path="/registros" element={<Registros />} />
+            <Route path="/vista-previa" element={<VistaPrevia />} />
+
             <Route path="/accesos" element={<Accesos />} />
             <Route path="/resultados" element={<Resultados />} />
           </Routes>

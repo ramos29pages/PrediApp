@@ -42,7 +42,7 @@ const Inicio = () => {
               <td>John Doe</td>
               <td>jodoe21@curnvirtual.edu.co</td>
               <td>{index % 2 === 0 ? "Tecnológica" : "Profesional"}</td>
-              <td>
+              <td className="actions">
                 <button title="Editar Registro" className="btn btn--icon btn--danger">
                   <FontAwesomeIcon icon={faTrash} />
                 </button>

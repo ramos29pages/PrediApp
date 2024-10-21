@@ -1,0 +1,73 @@
+table {
+    // background-color: royalblue;
+  width: calc(100vw - 150px);
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0px 20px;
+
+  thead {
+    position: sticky;
+    background-color: rgb(240, 244, 249);
+    top: 0px;
+    color: orange;
+    font-size: .8rem;
+  }
+
+  tbody {
+    td {
+      border: 1px solid rgba(128, 128, 128, 0.5);
+      padding: 0px 10px;
+      font-size: 0.9rem;
+      height: 48px;
+    }
+
+    .actions {
+        width: 90px;
+
+        .btn--danger {
+          font-size: 1.2rem;
+          width: 30px;
+          height: 30px;
+          border: none;
+          color: rgba(255, 0, 55, 0.758);
+          cursor: pointer;
+        }
+
+        .btn--edit {
+          border: none;
+          font-size: 1.2rem;
+          width: 30px;
+          height: 30px;
+            cursor: pointer;
+          color: rgba(0, 128, 0, 0.511);
+        }
+      }
+  }
+}
+
+
+.cont-save-to-db{
+    height: 58px;
+    padding-top: 15px;
+    // background: royalblue;
+    margin: 0px 30px;
+    display: flex;
+    justify-content: end;
+
+    button{
+        background: crimson;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background: orange;
+        width: 30%;
+        max-width: 200px;
+        transition: all 0.2 ease-in;
+
+        &:hover{
+            cursor: pointer;
+            transition: all 0.2 ease-in;
+            background: linear-gradient(orange, orangered);
+        }
+    }
+}

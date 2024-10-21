@@ -1,0 +1,12 @@
+// Aplicar Montserrat como fuente predeterminada
+body {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  // Establecer box-sizing en todo el documento
+  * {
+    box-sizing: border-box;
+  }

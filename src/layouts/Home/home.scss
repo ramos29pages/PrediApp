@@ -1,108 +1,60 @@
 .registro-personas {
-  width: 100%;
+  width: calc(100vw - 100px);
   height: calc(100vh - 80px);
   background-color: rgb(240, 244, 249);
 
-//   form {
-//     display: flex;
-//     padding: 0px 20px;
-//     height: 100px;
-//     gap: 18px;
-
-//     .table-title {
-//       height: 100%;
-//       display: flex;
-//       font-size: 1rem;
-//       justify-content: center;
-//       align-items: center;
-//       gap: 10px;
-//       font-weight: bold;
-
-//       a {
-//         height: 30px;
-//         width: 30px;
-//         text-align: center;
-//         color: orange;
-//         font-weight: bolder;
-//         border-radius: 5px;
-//         border: 3px solid orange;
-//       }
-//     }
-
-//     .input-field {
-//       background-color: white;
-//       border-radius: 10px;
-//       display: flex;
-//       height: 48px;
-//       align-self: center;
-//       align-items: center;
-//       cursor: text;
-
-//       flex-grow: 2;
-//       &:focus-within {
-//         border: 2px solid orange;
-//       }
-
-//       label {
-//         width: 30px;
-//         height: 30px;
-//         text-align: center;
-//         font-size: 1.2rem;
-//         color: rgba(128, 128, 128, 0.5);
-//       }
-
-//       input {
-//         height: 100%;
-//         width: 100%;
-//         padding: 10px;
-//         border: none;
-//         outline: none;
-//         border-radius: 10px;
-//       }
-//     }
-//   }
-
   .cont-table {
-    padding: 0px 10px 0px 20px;
+    padding: 0px;
     overflow-y: auto;
     height: calc(100% - 110px);
 
-    /* Para Chrome, Safari y otros basados en WebKit */
     &::-webkit-scrollbar {
-      width: 5px; /* Ancho de la barra */
+      width: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #888; /* Color del thumb */
-      border-radius: 10px; /* Bordes redondeados */
+      background: #888;
+      border-radius: 10px;
     }
 
     table {
-    //   background-color: royalblue;
-      width: 100%;
+      width: calc(100vw - 150px);
       text-align: center;
 
-      thead{
+      thead {
         position: sticky;
         background-color: rgb(240, 244, 249);
         top: 0px;
         color: orange;
       }
 
-      tbody{
+      tbody {
+        td {
+          border: 1px solid rgba(128, 128, 128, 0.5);
+          padding: 0px 10px;
+          font-size: 0.8rem;
+        }
 
-          td{
-            border: 1px solid rgba(128, 128, 128, 0.5);
-            padding: 0px 10px;
-            font-size: .8rem;
+        .actions {
+          width: 90px;
 
-            .btn--danger{
-                color: rgba(255, 0, 55, 0.758);
-            }
+          .btn--danger {
+            font-size: 1.2rem;
+            width: 30px;
+            height: 30px;
+            border: none;
+            color: rgba(255, 0, 55, 0.758);
+            cursor: pointer;
+          }
 
-            .btn--edit{
-                color: rgba(0, 128, 0, 0.511);
-            }
+          .btn--edit {
+            border: none;
+            font-size: 1.2rem;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            color: rgba(0, 128, 0, 0.511);
+          }
         }
       }
     }

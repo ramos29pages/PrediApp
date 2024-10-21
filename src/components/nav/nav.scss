@@ -1,11 +1,13 @@
+
 nav {
+  font-family: "Montserrat", sans-serif;
   background-color: rgb(255, 255, 255);
   height: 80px;
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 20px 0px 20px;
 box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
 
   .show__burguer{
@@ -30,33 +32,74 @@ box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
 
   .cont__logo{
     height: 100%;
-    width: 250px;
+    width: 200px;
     background: url(../../assets/logotxtteal.svg) no-repeat center center;
   }
 
   .user{
-    width: 150px;
+    width: 210px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     gap: 5px;
     transition: all .2s ease-in;
     color: rgba(128, 128, 128, 0.459);
-
+  
+    span{
+      cursor: pointer;
+    }
 
     .user-icon{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border: 4px solid rgba(128, 128, 128, 0.47);
         border-radius: 50%;
-  
+      cursor: pointer;
 
         img{
             width: 100%;
         }
     }
 
+    .infoUser{
+      margin-left: 10px;
+      // background-color: crimson;
+
+      p{
+        font-size: .8rem;
+        margin: 0px;
+        color: #222;
+      }
+
+      p:nth-child(2) {
+        color: orange;
+        font-size: .6rem;
+      }
+
+    }
+
+  }
+
+  .editing{
+    position: absolute;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    .edit{
+      background-color: crimson;
+      height: 300px;
+      width: 300px;
+    }
   }
 }

@@ -3,6 +3,7 @@ form {
     display: flex;
     padding: 0px 20px;
     height: 100px;
+    align-items: center;
     gap: 18px;
 
     .table-title {
@@ -17,7 +18,9 @@ form {
       a {
         height: 30px;
         width: 30px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: orange;
         font-weight: bolder;
         border-radius: 5px;
@@ -42,7 +45,9 @@ form {
       label {
         width: 30px;
         height: 30px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 1.2rem;
         color: rgba(128, 128, 128, 0.5);
       }
