@@ -1,0 +1,51 @@
+main {
+  background-color: crimson;
+  width: 100px;
+
+  .sidebar__content {
+    padding-top: 25px;
+      color: gray;
+      display: inline-flex;
+      gap: 5px;
+      width: 100%;
+      height: calc( 100vh - 80px);
+        background-color: white;
+        display: grid;
+        justify-content: center;
+
+    ul {
+      height: 100%;
+      list-style: none;
+      display: grid;
+      align-content: start;
+      width: 100px;
+      gap: 15px;
+      padding: 0;
+      text-align: center;
+      
+      li{
+          font-size: 2rem;
+          height: 78px;
+          border-bottom: 1px  solid rgba(128, 128, 128, 0.45);;
+          width: auto;
+          display: grid;
+          align-items: center;
+          color: gray !important;
+
+          p{
+            font-size: .8rem;
+          }
+
+          a{
+            color: rgba(128, 128, 128, 0.45);
+            
+            &:hover{
+                color: rgba(128, 128, 128, 0.8);
+
+            }
+          }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// Variables
+$primary-color: #FF9800;
+$secondary-color: #FF5722;
+$text-color: #333;
+$background-color: #f4f4f4;
+$sidebar-width: 80px;
+$header-height: 60px;
+
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal-container{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: "headere headere" "mene contente";
+  grid-template-rows: 80px 1fr;
+  background-color: rgba(65, 105, 225, 0.114);
+  background-color: rgb(240, 244, 249);
+
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  
+    .headere{
+      grid-area: headere;
+      z-index: 3;
+    }
+
+    .mene{
+      grid-area: mene;
+    }
+
+    .contenide{
+      grid-area: contente;
+    }
+}
+

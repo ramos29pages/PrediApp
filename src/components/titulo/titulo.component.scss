@@ -1,0 +1,67 @@
+
+form {
+    display: flex;
+    padding: 0px 20px;
+    height: 100px;
+    gap: 18px;
+
+    .table-title {
+      height: 100%;
+      display: flex;
+      font-size: 1rem;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+
+      a {
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        color: orange;
+        font-weight: bolder;
+        border-radius: 5px;
+        border: 3px solid orange;
+      }
+    }
+
+    .input-field {
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      height: 48px;
+      align-self: center;
+      align-items: center;
+      cursor: text;
+
+      flex-grow: 2;
+      &:focus-within {
+        border: 2px solid orange;
+      }
+
+      label {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgba(128, 128, 128, 0.5);
+      }
+
+      input {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+      }
+
+
+    }
+
+    .hidden {
+        display: none;
+    }
+
+ 
+  }
