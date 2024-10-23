@@ -1,54 +1,59 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
 import {
   faHome,
   faClipboardList,
   faUsers,
   faChartBar,
-  faUserSecret,
+  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./menu.scss";
 
 const MenuComponent = () => {
+  const currentPath = window.location.pathname; // Get the current URL path
+  useEffect(() => {
+    console.log('Ruta inicial:', window.location.pathname);
+  }, []);
+
   return (
     <>
       <main className="sidebar-menu">
         <div className="sidebar__content">
           <ul className="sidebar__nav">
-            <li>
-              <a href="/" className="active">
+            <li href="/" className={currentPath === "/" ? "active" : ""}>
+              <a  href="/" >
                 <FontAwesomeIcon icon={faHome} />
               </a>
-              <p>Inicio</p>
+              <p href="/">Inicio</p>
             </li>
-            <li>
-              <a href="/registros">
+            <li className={currentPath.includes("registro") ? "active" : ""}>
+              <a href="/registros" >
                 <FontAwesomeIcon icon={faUsers} />
               </a>
               <p>Registros</p>
             </li>
-            <li>
-              <a href="/accesos">
+            <li className={currentPath.includes("formulario") ? "active" : ""}>
+              <a href="/formularios">
                 <FontAwesomeIcon icon={faClipboardList} />
               </a>
-              <p>Accesos</p>
+              <p>Formularios</p>
             </li>
-            <li>
-              <a href="/resultados">
+            <li className={currentPath.includes("resultados") ? "active" : ""}>
+              <a href="/resultados" >
                 <FontAwesomeIcon icon={faChartBar} />
               </a>
               <p>Resultados</p>
             </li>
-            <li>
-              <a href="/admin">
-                <FontAwesomeIcon icon={faUserSecret} />
+            <li  className={currentPath.includes("information") ? "active" : ""}>
+              <a href="/information">
+                <FontAwesomeIcon icon={faInfoCircle} />
               </a>
-              <p>Admin</p>
+              <p>Predisaber</p>
             </li>
           </ul>
         </div>
       </main>
-      ;
     </>
   );
 };

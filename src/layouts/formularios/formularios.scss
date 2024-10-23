@@ -1,0 +1,32 @@
+.form__status__pending{
+    background-color: rgba(255, 166, 0, 0.3);
+    font-size: .8rem;
+    min-width: 120px;
+    padding: 5px;
+    color: orange;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.form__status__complete{
+    font-size: .8rem;
+    min-width: 120px;
+    padding: 5px;
+    color: green;
+    font-weight: bold;
+    background-color: rgba(0, 128, 0, 0.3);
+    border-radius: 5px;
+
+}
+
+.form__button__complete{
+    background-color: orange;
+    height: 38px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

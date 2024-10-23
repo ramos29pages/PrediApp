@@ -1,28 +1,12 @@
 // import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-import './home.scss'
+import './inicio-registro.scss'
 import TituloComponent from "../../components/titulo/titulo.component";
 
-const Inicio = () => {
+const InicioRegistro = () => {
   return (
     <div className="registro-personas">
-      {/* <form>
-        <p className="table-title">
-          Registro de personas 
-          <a href="/anadir-registro">
-            <FontAwesomeIcon icon={faPlus} />
-            </a>
-        </p>
-        <div className="input-field">
-          <label htmlFor="name">
-          <FontAwesomeIcon className="fontAwesomeIcon" icon={faSearch} />
-
-          </label>
-          <input type="text" name="name" id="name" placeholder="Ingresa una palabra para buscar"/>
-        </div>
-      </form> */}
-
       <TituloComponent titulo={"Registro de personas"} input/>
       <div className="cont-table">
       <table>
@@ -59,4 +43,4 @@ const Inicio = () => {
   );
 };
 
-export default Inicio;
+export default InicioRegistro;

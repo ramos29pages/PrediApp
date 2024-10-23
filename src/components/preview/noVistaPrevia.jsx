@@ -7,7 +7,7 @@ export default function NoVistaPreviation(){
 
     return (
 
-        <section>
+        <section className="nopreview__section">
             <h2><FontAwesomeIcon icon={faWarning} /></h2>
             <p>Parece que el archivo que ha subido a pesar de ser valido, no contiene las columnas necesarias para usar en este aplicativo. Porfavor reviselo e intente nuevamente.</p>
         </section>

@@ -2,20 +2,22 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faHome, faClipboardList, faUsers, faChartBar, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
 
-// Importe sus componentes de página aquí
 
-import Inicio from "./layouts/Home/home.jsx";
-import AnadirRegistro from "./layouts/registro/registro.jsx";
-import Registros from "./pages/Registros.jsx";
-import Accesos from "./pages/Accesos.jsx";
+import InicioRegistro from "./layouts/registro/inicio-registro.jsx";
+import AnadirRegistro from "./layouts/registro/añadir-registro.jsx";
+import Formularios from "./layouts/formularios/Formularios.jsx";
 import Resultados from "./pages/Resultados.jsx";
 import HeaderComponent from "./components/nav/nav.component";
 import MenuComponent from "./components/menu/menu.component";
 import VistaPrevia from "./components/table/table.component";
+import ResponderFormulario from "./pages/ResponderFormulario.jsx";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import "./PrediApp.scss";
+import Inicio from "./layouts/Home/inicio.jsx";
+import InformationComponent from "./components/info/information.jsx";
 
 
 const App = () => {
@@ -39,62 +41,21 @@ const App = () => {
         )}
         <div className="contenide">
           <Routes>
-            <Route exact path="/" element={<Inicio />} />
+            <Route exact path="/" element={ <Inicio/>} />
             <Route exact path="/anadir-registro" element={<AnadirRegistro />} />
-            <Route path="/registros" element={<Registros />} />
             <Route path="/vista-previa" element={<VistaPrevia />} />
+            <Route path="/registros" element={<InicioRegistro />} />
 
-            <Route path="/accesos" element={<Accesos />} />
+            <Route path="/formularios" element={<Formularios />} />
+            <Route path="/completar-formulario" element={<ResponderFormulario />} />
             <Route path="/resultados" element={<Resultados />} />
+            <Route path="/information" element={<InformationComponent />} />
           </Routes>
         </div>
       </div>
     </Router>
   );
-  // return (
-  //   <Router>
-  //     <div className="prediapp">
-  //       {/* Sidebar fijo */}
-  //       <nav className="prediapp__sidebar">
-  //         <div className="sidebar__content">
-  //           <div className="sidebar__logo">
-  //             <img src="/path-to-your-logo.png" alt="Inúñez Logo" />
-  //           </div>
-  //           <ul className="sidebar__nav">
-  //             <li><a href="/"><FontAwesomeIcon icon={faHome} /></a></li>
-  //             <li><a href="/registros"><FontAwesomeIcon icon={faClipboardList} /></a></li>
-  //             <li><a href="/accesos"><FontAwesomeIcon icon={faUsers} /></a></li>
-  //             <li><a href="/resultados"><FontAwesomeIcon icon={faChartBar} /></a></li>
-  //           </ul>
-  //         </div>
-  //       </nav>
 
-  //       <div className="prediapp__main-container">
-  //         {/* Header fijo */}
-  //         <header className="prediapp__header">
-  //           <h1>PrediApp</h1>
-  //           <div className="header__actions">
-  //             <button className="btn btn--icon"><FontAwesomeIcon icon={faBell} /></button>
-  //             <button className="btn btn--user">
-  //               <FontAwesomeIcon icon={faUser} />
-  //               Daniel Ramos
-  //             </button>
-  //           </div>
-  //         </header>
-
-  //         {/* Contenido dinámico */}
-  //         <main className="prediapp__main">
-  //           {/* <Switch>
-  //             <Route exact path="/" component={Home} />
-  //             <Route path="/registros" component={Registros} />
-  //             <Route path="/accesos" component={Accesos} />
-  //             <Route path="/resultados" component={Resultados} />
-  //           </Switch> */}
-  //         </main>
-  //       </div>
-  //     </div>
-  //   </Router>
-  // );
 };
 
 export default App;
